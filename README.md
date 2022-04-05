@@ -6,3 +6,13 @@ springboot2+log4j2简单demo,以后开发，需要用到哪种配置，或者需
 第二版配置更加全面
 #第二版第一次提交，梳理了日志输入是逻辑，可以只输入info日志，或者输入info级别以上日志。
 #增加了包级别设置
+
+
+配置Log4j2异步日志：
+1. 添加JVM参数：-DLog4jContextSelector=org.apache.logging.log4j.core.async.AsyncLoggerContextSelector
+2. 添加Disruptor依赖：
+   <dependency>
+   <groupId>com.lmax</groupId>
+   <artifactId>disruptor</artifactId>
+   <version>3.3.7</version>
+   </dependency>
